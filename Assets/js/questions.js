@@ -1,19 +1,5 @@
-const start = document.getElementById ("start");
-const quiz = document.getElementById ("quiz");
-const question = document.getElementById ("questions");
-const counter = document.getElementById ("counter");
-const timeGauge = document.getElementById ("timeGauge");
-const choiceA = document.getElementById ("A");
-const choiceB = document.getElementById ("B");
-const choiceC = document.getElementById ("C");
-const choiceD = document.getElementById ("D");
-const scoreDiv = document.getElementById ("score");
-var questionNumber = 0
 
-function loadQuestion() {
-    question.textContent = arrayQuestions[questionNumber].title;
-
-let arrayQuestions = [
+var questions = [
     {
       title: "Commonly used data types DO NOT include:",
       choices: ["strings", "booleans", "alerts", "numbers"],
@@ -46,4 +32,4 @@ let arrayQuestions = [
       choices: ["JavaScript", "terminal / bash", "for loops", "console.log"],
       answer: "console.log"
     }
-  ];}
+  ];

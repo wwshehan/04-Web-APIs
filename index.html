@@ -1,46 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="Assets/style/style.css"/>
+
     <title>Coding Quiz Challenge</title>
-</head>
-
-<body>
-
-<h1>Coding Quiz Challenge</h1>
-
-<div id="container">
-    <div id="start">Start Quiz!</div>
-    <div id="quiz" style="display:none">
-        <div id="question"></div>
-        <div id="timer">
-            <div id="counter"></div>
-            <div id="bTimeGauge"></div>
-            <div id="timeGauge"></div>
+  </head>
+  <body>
+    <header class="p-3 bg-dark">
+      <a href="highscore.html">Highscore</a>
+      <div id="timer" class="float-right text-danger">Time: 0</div>
+    </header>
+    <div class="container mt-5" id="home">
+      <div class="row justify-content: center">
+        <div class="col-10 text-center">
+          <h1>Coding Quiz Challenge</h1>
+          <p>This quiz is on a 70 second timer! 
+            <br>
+            Any questions you miss will deduct 10 seconds from the timer.
+            <br>
+            Any questions you answer correctly will add 5 seconds to the timer.
+          </p>
+          <button id="startBtn" class="btn btn-primary">Start!</button>
         </div>
-
-        <div id="choices" id ="A"
-         onclick="checkAnswer('A')"></div>
-         <div id="choice" id ="B"
-         onclick="checkAnswer('B')"></div>
-         <div id="choice" id ="C"
-         onclick="checkAnswer('C')"></div>
-         <div id="choice" id ="D"
-         onclick="checkAnswer('D')"></div>
+      </div>
     </div>
 
-    <div id="score" style="display:none">
+    <div class="container mt-3 d-none" id="questionDisplay">
+      <div class="row justify-content: center">
+        <div class="col-9">
+            <h3 id="questions" class="text-center">Questions</h3>
+            <ul id="answers" class = "list-unstyled m-4">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <p class= "answerFeedback text-center"></p>
+            </div>
+        </div>
     </div>
 
-</div>
+    <div class = "container mt-3 d-none" id="completeScore">
+        <div class ="row justify-content: center">
+            <div class = "col-9 text-center">
+                <h3>Quiz Complete</h3>
+                <p id ="completeScore"></p>
+                <form class = "userScore">
+                    <label for= "newHighScore"> Please enter your name:</label>
+                    <input type="text" id="username">
+                    <button class = "btn btn-primary" type = "submit" id= "submitScoreBtn">Submit Score</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-
-
-
-    <script src="./script.js"></script>
-</body>
+    <script src= "Assets/js/script.js"></script>
+    <script src= "Assets/js/questions.js"></script>
+  </body>
 </html>

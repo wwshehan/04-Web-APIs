@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highscores</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="Assets/style/style.css"/>
+</head>
+<body>
+    <div class= "row">
+        <div id="score-card" class="col lg ">
+            <div class="card" style="display:block">
+                <div class="card-body">
+                  <h2 class="card-title" id="highScores">High Scores</h2>
+                  <ol id="high-scores-list">
+
+                  </ol>
+                  <div id="buttonScoreDiv">
+                    <button id="btn-home" class="btn btn-primary">Home</button>
+                    <!-- not working -->
+                    <button id="btn-clear" class="btn btn-primary">Clear High Scores</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <script src= "Assets/js/highscorescript.js"></script>
+</body>
+</html>
