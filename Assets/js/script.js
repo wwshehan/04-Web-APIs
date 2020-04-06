@@ -25,7 +25,7 @@ function setTimer() {
     timeLeft--;
     timerEl.textContent = "Time:" + timeLeft;
 
-    if (timeLeft === 0 || timeLeft < 0 || questionNumber === questionNumber.length) {
+    if (timeLeft === 0 || timeLeft < 0 || questionNumber === questions.length){
       clearInterval(count);
       setTimeout(displayScore, 500);
     }
